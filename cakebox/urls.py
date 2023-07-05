@@ -38,6 +38,8 @@ urlpatterns = [
     path("cake/<int:pk>/change/",views.CakeboxEditView.as_view(),name="cake-edit"),
     path("registers/",views.SignUpView.as_view(),name="register"),
     path("login/",views.SignInView.as_view(),name="signin"),
-    path("logout/",views.signout_view,name="signout")
+    path("logout/",views.signout_view,name="signout"),
+    path("cakebox/",views.HomeView.as_view(),name="home"),
+    path("index/",views.IndexView.as_view(),name="index")
     
 ]+router.urls + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

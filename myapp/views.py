@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from django.views.generic import View
+from django.views.generic import View,TemplateView
 from myapp.models import Cakebox
 from django import forms
 from django.contrib.auth.models import User
@@ -140,7 +140,7 @@ class SignInView(View):
                 login(request,usr)
                 messages.success(request,"Successfully")
 
-            return redirect("cake-list")
+            return redirect("index")
         messages.error(request,"Invalid creadential")
         return render(request,"login.html",{"form":form})
 
@@ -148,3 +148,13 @@ class SignInView(View):
 def signout_view(request,*args,**kwargs):
     logout(request)
     return redirect("signin")
+
+
+
+class HomeView(TemplateView):
+    
+    template_name="home.html"
+
+class IndexView(TemplateView):
+    
+    template_name="index.html"

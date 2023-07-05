@@ -7,19 +7,28 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
-<body>
-    <h1 class="text-center text-warning">Edit Cake's Details</h1>
-    <span class="border border-2">
-    <div class="col-2"></div>
+<style>
+    body { 
+        height: 100vh;
+        background-color: #74EBD5;
+background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWKV0WZ39kwf7X8k2pLM1ese7XB2raaQ64hg&usqp=CAU");
 
-        <div class="col-8 container">
+    }
+    </style>
+<body>
+    <h1 class="text-center text-warning">Edit Cake's </h1>
+    <span class="border border-2">
+    <div class="col-4"></div>
+
+        <div class="col-4 container">
     <form action="" method="post" enctype="multipart/form-data">
         {%csrf_token%}
         {{form.as_p}}
-        <input type="submit" value="update" class="btn btn-outline-success from-control">
+        <input type="submit" value="Update" class="btn btn-success from-control">
     </form>
     </div>
-    <div class="col-2"></div>
+    <div class="col-4"></div>
     </span>
 </body>
 </html>
