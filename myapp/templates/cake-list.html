@@ -25,17 +25,19 @@ background-image: linear-gradient(43deg, #e686c3 0%, #50c88e 46%, #c2de8a 100%);
             
         <tr class="table-primary">
             
+            
             <th>Image</th>
             <th>SlNo</th>
             <th>Name</th>
             <th>Flavour</th>
-            <th>Shape</th>
+            <!-- <th>Shape</th>
             <th>Price</th>
-            <th>Weight</th>
+            <th>Weight</th> -->
             <th>Layer</th>
             <th>Action</th>
         </tr>
         {%for c in cakes%}
+        
         <tr class="table-warning">
 
             {%if c.pic%}
@@ -46,16 +48,16 @@ background-image: linear-gradient(43deg, #e686c3 0%, #50c88e 46%, #c2de8a 100%);
             <td>{{forloop.counter}}</td>
             <td>{{c.name}}</td>
             <td>{{c.flavour}}</td>
-            <td>{{c.shape}}</td>
+            <!-- <td>{{c.shape}}</td>
             <td>{{c.price}}</td>
-            <td>{{c.weight}}</td>
+            <td>{{c.weight}}</td> -->
             <td>{{c.layer}}</td>
             
 
             <td>
-                <a href="{%url 'cake-detail' c.id%}" class="btn btn-outline-info">Detail</a>
+                <a href="{%url 'cake-detail' c.id%}" class="btn btn-outline-info">ViewMore</a>
                 
-                <a href="{%url 'cake-edit' c.id%}" class="btn btn-outline-warning">Edit</a>
+                
             </td>
         </tr>
         {%endfor%}

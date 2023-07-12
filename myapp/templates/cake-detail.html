@@ -18,26 +18,35 @@ background-image: linear-gradient(43deg, #f57d8b 0%, #8be38b 46%, #89f5ba 100%);
 <body>
     <h1 class="text-info text-center">Cake Detail</h1>
 
+      <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{cake.pic.url}}" class="card-img-top poster-image" alt="Movie Poster">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">{{cake.name}}</h4>
+                        <p class="card-text">Description :{{cake.description}}</p>
+                        <p class="card-text">Flavour :{{cake.flavour}}</p>
+                        <p class="card-text">Shape :{{cake.shape}}</p>
+                        <p class="card-text">Layer :{{cake.layer}}</p>
+                        <p class="card-text">Weight :{{cake.weight}}</p>
+                        <p class="card-text">Price : Rs {{cake.price}}</p>
+                        
+                    </div>
+                </div>
+                  
+                <td>
+                  <a href="{%url 'cake-edit' cake.id%}" class="btn btn-outline-warning">Edit</a>
+                  
+                  <a href="{%url 'cake-delete' cake.id%}" class="btn btn-outline-danger">Delete</a>
+              </td>
 
-    <div class=" container shadow p-2" style="width: 450px;;">
-        <img src="{{cake.pic.url}}" alt="" width="100px" height="250px" class="card-img-top">
-        
-        <div class="card-body">
-          <h5 class="card-title">{{cake.name}}</h5>
-          <p class="card-text">{{cake.description}}</p>
+            </div>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">{{cake.flavour}}</li>
-          <li class="list-group-item">{{cake.shape}}</li>
-          <li class="list-group-item">{{cake.price}}</li>
-          <li class="list-group-item">{{cake.weight}}</li>
-          <li class="list-group-item">{{cake.layer}}</li>
 
-          <a href="{%url 'cake-delete' cake.id%}" class="btn btn-outline-danger">Delete</a>
-          
-        </ul>
-        
-      </div>
-    
 </body>
 </html>
